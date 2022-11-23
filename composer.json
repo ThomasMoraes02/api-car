@@ -1,0 +1,28 @@
+{
+    "name": "thomas/api-car",
+    "description": "api rest",
+    "autoload": {
+        "psr-4": {
+            "ApiCar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApiCar\\Test\\" : "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thomas Moraes",
+            "email": "tho.vini7@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "mongodb/mongodb": "^1.13"
+    }
+}
