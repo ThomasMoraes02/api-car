@@ -1,7 +1,7 @@
 <?php 
 namespace ApiCar\domain;
 
-use PharIo\Manifest\InvalidEmailException;
+use DomainException;
 
 class Email
 {
@@ -15,7 +15,7 @@ class Email
     private function setEmail(string $email): void
     {
         if(filter_var($email, FILTER_VALIDATE_EMAIL) != true) {
-            throw new InvalidEmailException("This e-mail is invalid: $email");
+            throw new DomainException("This e-mail is invalid: $email");
         }
         $this->email = $email;
     }

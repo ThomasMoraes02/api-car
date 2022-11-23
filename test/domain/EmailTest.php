@@ -2,8 +2,8 @@
 namespace ApiCar\Test\domain;
 
 use ApiCar\domain\Email;
+use DomainException;
 use PHPUnit\Framework\TestCase;
-use PharIo\Manifest\InvalidEmailException;
 
 class EmailTest extends TestCase
 {
@@ -15,7 +15,7 @@ class EmailTest extends TestCase
 
     public function test_email_invalid()
     {
-        $this->expectException(InvalidEmailException::class);
+        $this->expectException(DomainException::class);
         new Email("invalid");
     }
 }
