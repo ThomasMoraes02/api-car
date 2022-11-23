@@ -3,7 +3,7 @@
 use ApiCar\application\usecase\CreateDriver;
 use ApiCar\application\web\controllers\CreateDriverOperation;
 use ApiCar\application\web\WebController;
-use ApiCar\infraestructure\driver\DriverRepositoryMemory;
+use ApiCar\infraestructure\driver\DriverRepositoryMongo;
 use Slim\Factory\AppFactory;
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
@@ -18,7 +18,7 @@ $app->get("/drivers", function(Request $request, Response $response, array $args
 });
 
 $app->post("/drivers", function(Request $request, Response $response, array $args) {
-    $repository = new DriverRepositoryMemory;
+    $repository = new DriverRepositoryMongo;
     $useCase = new CreateDriver($repository);
     $controller = new WebController(new CreateDriverOperation($useCase));
 

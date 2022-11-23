@@ -29,6 +29,7 @@ class CreateDriver implements UseCase
             }
         } catch(Exception $e) {
             $driver = Driver::create($request['name'], $request['email'], $request['birthdate']);
+            $this->repository->addDriver($driver);
         }
 
         return [

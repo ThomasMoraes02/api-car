@@ -5,9 +5,9 @@ use ApiCar\domain\Email;
 
 interface DriverRepository
 {
-    public function addDriver($driver): void;
+    public function addDriver(Driver $driver): void;
 
-    public function findDriverById($id): Driver;
+    public function findDriverById(int $id): Driver;
 
     public function findByEmail(Email $email): Driver;
 
