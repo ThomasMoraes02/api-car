@@ -10,6 +10,8 @@ class CreateDriverOperation implements ControllerOperation
 {
     use HelperHttp;
 
+    public array $requiredParams = ["name", "email", "birthdate"];
+
     private UseCase $useCase;
 
     public function __construct(UseCase $useCase)

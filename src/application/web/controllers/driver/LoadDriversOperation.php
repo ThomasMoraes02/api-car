@@ -10,6 +10,8 @@ class LoadDriversOperation implements ControllerOperation
 {
     use HelperHttp;
 
+    public $requiredParams = [];
+
     private UseCase $useCase;
 
     public function __construct(UseCase $useCase)
