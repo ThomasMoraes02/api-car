@@ -4,9 +4,9 @@ namespace ApiCar\application\factories\driver;
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
 use ApiCar\application\web\WebController;
-use ApiCar\application\usecase\LoadDrivers;
+use ApiCar\application\usecase\driver\LoadDrivers;
 use ApiCar\infraestructure\driver\DriverRepositoryMongo;
-use ApiCar\application\web\controllers\LoadDriversOperation;
+use ApiCar\application\web\controllers\driver\LoadDriversOperation;
 
 class MakeLoadDriver
 {

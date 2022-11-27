@@ -1,14 +1,12 @@
 <?php 
-namespace ApiCar\application\usecase;
+namespace ApiCar\application\usecase\driver;
 
-use ApiCar\domain\driver\Driver;
-use ApiCar\domain\driver\DriverRepository;
-use ApiCar\domain\Email;
-use DomainException;
 use Error;
 use Exception;
-use InvalidArgumentException;
-use Throwable;
+use ApiCar\domain\Email;
+use ApiCar\domain\driver\Driver;
+use ApiCar\application\usecase\UseCase;
+use ApiCar\domain\driver\DriverRepository;
 
 class CreateDriver implements UseCase
 {

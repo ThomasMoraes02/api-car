@@ -2,12 +2,10 @@
 namespace ApiCar\Test\application\usecase;
 
 use Error;
-use Exception;
-use DomainException;
 use PHPUnit\Framework\TestCase;
-use ApiCar\domain\driver\Driver;
 use ApiCar\domain\driver\DriverRepository;
-use ApiCar\application\usecase\CreateDriver;
+use ApiCar\application\usecase\driver\CreateDriver;
+use ApiCar\domain\driver\Driver;
 use ApiCar\infraestructure\driver\DriverRepositoryMemory;
 
 class CreateDriverTest extends TestCase

@@ -1,12 +1,12 @@
 <?php 
-namespace ApiCar\application\web\controllers;
+namespace ApiCar\application\web\controllers\driver;
 
+use ApiCar\application\web\HelperHttp;
 use ApiCar\application\usecase\UseCase;
 use ApiCar\application\web\ControllerOperation;
-use ApiCar\application\web\HelperHttp;
 use Throwable;
 
-class CreateDriverOperation implements ControllerOperation
+class LoadDriversOperation implements ControllerOperation
 {
     use HelperHttp;
 
@@ -21,10 +21,10 @@ class CreateDriverOperation implements ControllerOperation
     {
         try {
             $response = $this->useCase->perform($request);
-            return $this->created($response);
+            return $this->ok($response);
         } catch(Throwable $e) {
             return $this->forbidden($e->getMessage());
         }
-        return $this->badRequest("Bad Request");
+        return $this->serverError("Server Error");
     }
 }

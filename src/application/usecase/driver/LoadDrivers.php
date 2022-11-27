@@ -1,8 +1,9 @@
 <?php 
-namespace ApiCar\application\usecase;
+namespace ApiCar\application\usecase\driver;
 
-use ApiCar\domain\driver\DriverRepository;
 use DomainException;
+use ApiCar\application\usecase\UseCase;
+use ApiCar\domain\driver\DriverRepository;
 
 class LoadDrivers implements UseCase
 {
